@@ -1,10 +1,12 @@
 [build]
   command = "npm install && prisma generate && npm run build"
   publish = ".next"
-  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "18"
+  DATABASE_URL = "postgresql://postgres.ziqdkazerxdpcedjtuns:Filevault%402026%21@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
+  NEXTAUTH_SECRET = "jksportshub-secret-key-2026"
+  NEXTAUTH_URL = "https://jksportshub.netlify.app"
   NPM_FLAGS = "--legacy-peer-deps"
 
 [[plugins]]
