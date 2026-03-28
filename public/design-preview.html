@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#bac8dc",
+              "outline-variant": "#44474c",
+              "on-surface-variant": "#c4c6cc",
+              "on-primary-fixed-variant": "#3a4859",
+              "primary-container": "#0d1b2a",
+              "surface-tint": "#bac8dc",
+              "on-primary": "#243141",
+              "on-primary-container": "#768497",
+              "inverse-surface": "#e3e2e8",
+              "on-error": "#690005",
+              "on-surface": "#e3e2e8",
+              "secondary-fixed-dim": "#afc9ea",
+              "surface-container-highest": "#343439",
+              "on-primary-fixed": "#0f1c2c",
+              "on-error-container": "#ffdad6",
+              "on-secondary": "#17324d",
+              "inverse-on-surface": "#2f3035",
+              "secondary-fixed": "#d1e4ff",
+              "surface-container": "#1f1f24",
+              "tertiary-container": "#251800",
+              "tertiary": "#e9c176",
+              "surface-container-lowest": "#0d0e12",
+              "surface-container-low": "#1a1b20",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "background": "#121317",
+              "surface-container-high": "#292a2e",
+              "primary-fixed": "#d6e4f9",
+              "on-tertiary-container": "#a07e3a",
+              "secondary": "#afc9ea",
+              "on-tertiary": "#412d00",
+              "on-secondary-fixed-variant": "#2f4865",
+              "secondary-container": "#2f4865",
+              "tertiary-fixed": "#ffdea5",
+              "surface": "#121317",
+              "inverse-primary": "#525f71",
+              "tertiary-fixed-dim": "#e9c176",
+              "on-tertiary-fixed": "#261900",
+              "primary": "#bac8dc",
+              "outline": "#8e9196",
+              "on-secondary-container": "#9eb7d8",
+              "on-background": "#e3e2e8",
+              "surface-bright": "#38393e",
+              "error-container": "#93000a",
+              "surface-dim": "#121317",
+              "surface-variant": "#343439",
+              "on-secondary-fixed": "#001d36",
+              "error": "#ffb4ab"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(13, 27, 42, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .hero-gradient {
+        background: linear-gradient(45deg, #0d1b2a 0%, #121317 100%);
+      }
+      .no-border-separator {
+        border: none !important;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-tertiary selection:text-on-tertiary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl shadow-2xl shadow-blue-900/20">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-blue-200 dark:text-blue-100 font-['Space_Grotesk'] uppercase">
+                JKsportshub
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:text-yellow-500 transition-all duration-300" href="#">Academy</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:text-yellow-500 transition-all duration-300" href="#">Accessories</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:text-yellow-500 transition-all duration-300" href="#">Cricket</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:text-yellow-500 transition-all duration-300" href="#">Fitness</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:text-yellow-500 transition-all duration-300" href="#">Football</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Space_Grotesk'] tracking-tight font-bold uppercase hover:text-yellow-500 transition-all duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="scale-95 active:scale-90 transition-transform text-blue-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="scale-95 active:scale-90 transition-transform text-blue-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section: Digital Clubhouse -->
+<header class="relative min-h-screen flex items-center pt-24 overflow-hidden hero-gradient">
+<div class="absolute inset-0 opacity-40">
+<img alt="Cinematic wide shot of a pristine stadium turf under dramatic evening floodlights with a light morning mist" class="w-full h-full object-cover" data-alt="cinematic wide shot of a pristine empty stadium at night with dramatic floodlighting and subtle atmospheric haze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqXnXlRtz8uViI8biCP_l3V-z6f7ERH7fGfpIleaQxGDJBEn1WlgID1iETCOv0iMY6cL-OZfQy8dN1U19E9l-kTjvoLPcuII75JzoX52nDphpO7asONmzmCvpb33EjJGeV_jcQFLaON2dDWi8f8krFVAMap8Z4erF607Z8hxzKpduaYu8eNY0yB933HqpJK2k5KQsVhX15f72WTpYugJesOukE308jmIsrTkXWbiQT1d4WXUJ9V5vyKpreHTRgjbPQYDM7YuJe00A"/>
+</div>
+<div class="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-8 flex flex-col justify-center">
+<span class="font-label text-tertiary uppercase tracking-[0.3em] mb-6 text-sm font-bold">The Digital Clubhouse</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold uppercase tracking-tighter leading-[0.9] text-primary-fixed-dim mb-8">
+                    The New Standard <br/> of <span class="text-tertiary">Performance</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                    Elevating the game for those who demand excellence. Experience a curated collection of elite sporting equipment and professional-grade coaching.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-tertiary text-on-tertiary font-bold uppercase tracking-widest text-sm rounded-md hover:brightness-110 transition-all">Explore Collections</button>
+<button class="px-8 py-4 border border-outline-variant text-primary-fixed-dim font-bold uppercase tracking-widest text-sm rounded-md hover:bg-white/5 transition-all">Join Academy</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 hidden xl:block">
+<div class="flex flex-col items-end gap-2 text-outline">
+<span class="text-xs uppercase tracking-widest">Est. 2024</span>
+<div class="w-24 h-px bg-outline-variant"></div>
+</div>
+</div>
+</header>
+<!-- About Section: Crafting Champions -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Professional athlete focusing intensely during a high-performance training session in a dark gym" class="w-full h-full object-cover" data-alt="extreme close-up of a professional athlete's face with sweat and intense focus during heavy training in dark lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO2q5sqU8mbNXzyhmbvoSjeyuEcCFe8TLa9de0jJwg_bK9Jr6XY9X3GFSaRNzfqjFi5-UoBO6leWNb-KOeMr7gHzhVbnioKm1C8Saqtyhk37Jbse5X0SAgMwxrZFwCQ7k0cTmzSDz25Q5zUltCne8BX7h0XSZZaTVptBuXp5pikNC2E9iR2GeJ4VEJ-HUn5dXlidrurcY1CXdrZI3eCdQmkWq1aEjRBohN8GzeL9YVAg_TFLBneLInaNS8iTdk-oBQoy8lFEhsPFk"/>
+</div>
+<div class="absolute -bottom-10 -right-10 bg-surface-container-high p-8 rounded-xl shadow-2xl hidden md:block max-w-xs">
+<h3 class="font-headline text-2xl font-bold text-tertiary mb-2 uppercase">15+ Years</h3>
+<p class="text-on-surface-variant text-sm">Of engineering excellence and sporting pedigree, delivering the tools for victory.</p>
+</div>
+</div>
+<div>
+<span class="font-label text-tertiary uppercase tracking-widest mb-4 block">About JKsportshub</span>
+<h2 class="font-headline text-5xl font-bold uppercase tracking-tight text-on-surface mb-8">Crafting Champions Since Inception</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                        At JKsportshub, we don't just sell equipment; we provide the foundation for greatness. Born from a passion for professional-grade performance, our mission is to equip the next generation of athletes with the same precision tools used in the upper echelons of global sport.
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10">
+                        Our curated selection across Cricket, Football, and Fitness is vetted by professional coaches and elite players, ensuring every piece of gear meets the rigorous standards of The Digital Clubhouse.
+                    </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-3xl font-headline font-bold text-primary mb-1">Elite</div>
+<div class="text-sm text-outline uppercase tracking-wider">Product Sourcing</div>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-primary mb-1">Expert</div>
+<div class="text-sm text-outline uppercase tracking-wider">Academy Coaching</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Elite Disciplines: Bento Grid Layout -->
+<section class="py-32 bg-surface-container-low">
+<div class="container mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label text-tertiary uppercase tracking-widest mb-4 block">Our Specialties</span>
+<h2 class="font-headline text-5xl font-bold uppercase tracking-tight text-on-surface">Elite Disciplines</h2>
+</div>
+<div class="hidden md:block">
+<a class="text-tertiary flex items-center gap-2 font-bold uppercase text-sm tracking-widest" href="#">View All Categories <span class="material-symbols-outlined">trending_flat</span></a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px]">
+<!-- Accessories -->
+<div class="md:col-span-2 md:row-span-1 group relative overflow-hidden rounded-xl bg-surface-container-highest">
+<img alt="Premium sports accessories including a stopwatch, leather gym bag, and high-performance hydration bottle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" data-alt="luxury sports accessories arranged on a dark table including a mechanical stopwatch and high-end leather gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQSGTFmzbeU5vHqPf5INwlB0CElwj6VzHSgDXATEi420U8T3Ha-HQog2iCXa6-84v8V93H0veSp--P3Pr-Pm4Fl2_5K4ZTvRpZp5UpSPt2POujidCtfQG5SbJ7A5GW6GocsAXsEwpk1ZO7DNN9STFP7C1bd2pqtNJLA6jgXO2Gouedm7UM0a73Rorp2mf1jz5LjDJcZQns4Az9rbzUrpTJssYN76EyhSp5efPax8Afv85HFFH_iC4DW3zX5bHhEuEfr9a8YAQkbuE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline text-3xl font-bold uppercase text-white mb-2">Accessories</h3>
+<p class="text-slate-300 text-sm max-w-xs">The essential details that separate the good from the great.</p>
+</div>
+</div>
+<!-- Cricket -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest">
+<img alt="Close-up of a professional grade cricket bat and red leather ball on a sun-drenched oval" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" data-alt="extreme close-up of a high-grade willow cricket bat with red ball on emerald green grass at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA_P0RRkYrN78hn17oA1uG8zV51u1NGnvI99tun_U46MAikFPz3TzOSDeSO06onXr9EVZHx8L0pDc0b_MkmbzrfRYQ1WS7M0ShnhlE3k3mN8NKGYVevydZnRmoC3rUidT0tgJt0jiIvWawUV7_0e5vRnD5hpEIKbKgmMHVW20ZsbF4dpxUGxji9ai1_Ks2ztlQxjtsmn2rHG-zlK003muxyTD_AGZ7ZBsUO87jtgoGjov5v0Og9khUFgv9ZdXJa8BxmeA-WcE6Bmk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline text-4xl font-bold uppercase text-white mb-2">Cricket</h3>
+<p class="text-slate-300 text-sm max-w-sm">From English Willow to professional protective gear, dominate the crease.</p>
+</div>
+</div>
+<!-- Fitness -->
+<div class="md:col-span-1 md:row-span-1 group relative overflow-hidden rounded-xl bg-surface-container-highest">
+<img alt="Dumbbells and kettlebells in a high-end personal training studio with soft bokeh lighting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" data-alt="professional gym equipment with industrial textures and moody lighting in a boutique fitness club" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX6OKQ_CQbwdXCW4hFu9rWOiKu3do4QpJGdbRm72QH8iyrFVwqKfARj_ae6x7aYmtsJhMRC_ftQmA_q9URjtItOBShPfX48Hw8KcvT8ParPHbzpBOA0MMjSRN_BcAvsRNav_jjMgX2iWZkNKpU_GDj1nrFVHE2bMx6DCsExa_pauedWJph3gxboEJi-AG89s0i9VUd-ZSX_KJDm6z8zSwPaMzsS2xTSPSP8IPXW6if8PSsOCapePP7zDzdX3i4vYpy4TpnE_Esb0U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline text-2xl font-bold uppercase text-white mb-1">Fitness</h3>
+<p class="text-slate-300 text-xs">Peak conditioning gear.</p>
+</div>
+</div>
+<!-- Football -->
+<div class="md:col-span-1 md:row-span-1 group relative overflow-hidden rounded-xl bg-surface-container-highest">
+<img alt="A professional football resting on turf under bright stadium lights with a dramatic blue hour sky" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" data-alt="football on high-quality pitch with sharp morning shadows and stadium architecture in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5d0EAX0y3-twr1FKjjlVTVCvYEHHfXTZRs-VwHV1qY8huQGY-1_N66ZPxOlwiRXyyynJZ74-_wyH87SIgWAESe7o-Anwe-XH17HBOuv3adsmgK4P-62mHG3FoVpPR-elS_WgsTPelLmUaG7rLhXfMUqks8DQ2zXA_5vNWsy7vCeikp03YalOLIS39QeuREnmwK2sCEqaMT-BINhaY-vxayaGl3Z2b1JNJsD8awCCT3G9bETNLm-bD4jTSgjuyUV4o8UZbzKbg30c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline text-2xl font-bold uppercase text-white mb-1">Football</h3>
+<p class="text-slate-300 text-xs">The beautiful game, elevated.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Championship Edit: Product Showcase -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<span class="font-label text-tertiary uppercase tracking-widest mb-4 block">Curated Excellence</span>
+<h2 class="font-headline text-5xl font-bold uppercase tracking-tight text-on-surface mb-6">The Championship Edit</h2>
+<div class="w-20 h-1 bg-tertiary mx-auto mb-8"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product 1 -->
+<div class="group">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden mb-6 relative">
+<img alt="Luxury hand-stitched leather football with a vintage aesthetic on a minimalist background" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="high-end vintage leather football with detailed stitching on a clean dark grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB34Dz7fd2vW9JKS_jKRDB8fKRkOYjJqSfJe3hXSZGldavULuNGr7ItFx6XizSdfspRXnbtDx_vCX7mCyfVDg9Boa0NOrbDV38HHtkeXMikwOsSnukvQWEjmpobdcSGsdI-y7BXr5HTGJC9qJsA7HUVqgysIp5ZmTaueU_y5sGEBXfVJBDsg7e9H0emib_BGqsybvQS7cM9BYI5t_b6yiFCSGcFarQ1LL65gZ9cQQrvMp6K_OVXJdIZLZJbQpp-m1YNbGUU82kRfw8"/>
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary text-[10px] font-bold uppercase px-3 py-1 rounded-full">New Arrival</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Football / Equipment</span>
+<h3 class="font-headline text-xl font-bold uppercase mt-1 mb-2">Pro-Series Match Ball</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="text-xl font-bold font-headline text-primary">$189</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden mb-6 relative">
+<img alt="Professional grade cricket gloves with carbon fiber accents and white leather finish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="ultra-modern cricket gloves with carbon fiber texture and premium white leather detailing on dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7DK5Ha4526mgfkrzowT_gQ1X47zxTlzHBBdYtFQt9J2I5QP10o6Y4P5L84UsLJzeLpI_2E5ssH4RFTxaNOcYDgXFuYQSEMXMLg3dJPoc1DK3IqRm8ufWf5wnzSRKVcS6CxSC-e8lKxfFgirsKiOksoCEL47US_P5vWuSCtyeKEjea4ZeLazdWEqIwc2-SuZ20SpcwB1zKLLVuVbbyO1BgdQo77heE5wWXIey7jRU7ijbWrGdc0X0ykiQesDa1JXH8e1BHJWApyY0"/>
+<div class="absolute top-4 right-4 bg-primary text-on-primary text-[10px] font-bold uppercase px-3 py-1 rounded-full">Elite Pick</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Cricket / Protection</span>
+<h3 class="font-headline text-xl font-bold uppercase mt-1 mb-2">Apex Willow Bat Gen-V</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="text-xl font-bold font-headline text-primary">$549</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden mb-6 relative">
+<img alt="Smart fitness tracker with sleek metallic finish and high-resolution display on a wrist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="luxury smart fitness watch with metallic body and minimal interface on a athlete's wrist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_y9BCuRjVAfXeINis62AOuD7WGXmmTWftxJQAPwUQr1QT87xy6w4kY41M-dZKEHnBhvD4qAXf8i5UP5fWoTcIddxO7rtmoJ7gf1GfTc30kmBcRMFHWNUF43E6tThAn5cLbnP1a0xswat9CtT3GsBhi-A457YKpjj3lbtWhy6ke9lw2ERf2eVOyoV4xA60bf2JeXgWPYwWnUzmSlwNbAxbtxCokPHjbX_7Rq81JAlzp1TrSolkcqZ2mTsWtnUbIHZz_Hk65nwJYVU"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Fitness / Tech</span>
+<h3 class="font-headline text-xl font-bold uppercase mt-1 mb-2">Clubhouse Tracker 2.0</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+<div class="text-xl font-bold font-headline text-primary">$299</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Academy: Editorial Style -->
+<section class="py-32 bg-slate-950 text-white overflow-hidden">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-4 lg:sticky lg:top-32">
+<span class="font-label text-tertiary uppercase tracking-widest mb-4 block">The Academy</span>
+<h2 class="font-headline text-6xl font-bold uppercase tracking-tight leading-[0.9] mb-8">Master The Fundamentals</h2>
+<p class="text-slate-400 text-lg mb-10">Exclusive access to world-class coaching blueprints and tactical masterclasses designed for the elite athlete.</p>
+<button class="flex items-center gap-4 group">
+<span class="w-12 h-12 rounded-full border border-tertiary flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-all">
+<span class="material-symbols-outlined">play_arrow</span>
+</span>
+<span class="uppercase font-bold tracking-widest text-sm">Watch the Preview</span>
+</button>
+</div>
+<div class="lg:col-span-8 space-y-12">
+<!-- Academy Card 1 -->
+<div class="group relative overflow-hidden flex flex-col md:flex-row gap-8 bg-slate-900/50 p-1 rounded-xl hover:bg-slate-900 transition-colors">
+<div class="w-full md:w-64 h-64 flex-shrink-0 overflow-hidden rounded-lg">
+<img alt="Cricket coach explaining technical batting stance to a young student on a sunny pitch" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="batting coach correcting posture of a cricket student on a bright sunny day at a professional academy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7a3f6DrzIuTSczZQQU1G55Bc-lwFJ42N2uq5sQz-EW3VAa93jNEAOzqqnKF36Dk12OZ5SLM6Poxq7nuFcZ8gmxW-TP6oktNvWmuEuHm3woOKIY77qCHHS9WTA-qVbdiqV-J_jUNdTVBRCqIUXVWOnBj58RaJQyyU26c8zjjFhEqrAXDsPe9jAHklS76Vs-gwUhnG_epnPaafYjxFG036IKjDmXCOfyiy4ErNX4D7OWfx5cNG6IGA2HoEj2_CaLPZMVy2TkvHQahQ"/>
+</div>
+<div class="flex-grow p-4 md:p-8">
+<h3 class="font-headline text-3xl font-bold uppercase mb-4">Cricket Masterclass</h3>
+<p class="text-slate-400 mb-6 leading-relaxed">A comprehensive 12-week program focusing on advanced stroke play, technical defense, and match mentalities taught by international veterans.</p>
+<div class="flex items-center gap-6">
+<span class="text-[10px] font-bold uppercase text-tertiary">8 Modules</span>
+<span class="text-[10px] font-bold uppercase text-slate-500">24 HD Lessons</span>
+</div>
+</div>
+</div>
+<!-- Academy Card 2 -->
+<div class="group relative overflow-hidden flex flex-col md:flex-row gap-8 bg-slate-900/50 p-1 rounded-xl hover:bg-slate-900 transition-colors">
+<div class="w-full md:w-64 h-64 flex-shrink-0 overflow-hidden rounded-lg">
+<img alt="Football tactical board with magnets showing complex player formations and strategies" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="close-up of a magnetic tactics board for football coaches with red and blue counters in formation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6OUusXWeD-NobvqzjCKDfxmcput6ixS-46LGOakJWLroY6S7uqc9tZGX20PsYkZyTxCe35KgMSqVTWBbQghibN58m8k6-b3I4LwYg1rAR1_CAEEb_QnnucriGWoW6BEBZlh01oSmqYZOCFoSQgSteIPvZIvXozyxEgVcOdOtH9MYZsp1r6esmL6VX_nqLs8wtA70rSnJPatWwdL6jVPhN4EusGGZ1DAA8PO75qIiVfO2KrUuTZZ7r4LjWg-QOgViPlhDa0E5HdM8"/>
+</div>
+<div class="flex-grow p-4 md:p-8">
+<h3 class="font-headline text-3xl font-bold uppercase mb-4">Football Tactical Hub</h3>
+<p class="text-slate-400 mb-6 leading-relaxed">Deconstructing elite systems of play. Learn the philosophies behind the world's most successful managers and teams.</p>
+<div class="flex items-center gap-6">
+<span class="text-[10px] font-bold uppercase text-tertiary">15 Blueprints</span>
+<span class="text-[10px] font-bold uppercase text-slate-500">Live Workshops</span>
+</div>
+</div>
+</div>
+<!-- Academy Card 3 -->
+<div class="group relative overflow-hidden flex flex-col md:flex-row gap-8 bg-slate-900/50 p-1 rounded-xl hover:bg-slate-900 transition-colors">
+<div class="w-full md:w-64 h-64 flex-shrink-0 overflow-hidden rounded-lg">
+<img alt="Athlete performing explosive box jumps in a high-performance conditioning facility" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="explosive movement athlete jumping in a darkened high-performance sports lab with modern equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_G-aqUK813F_JhUJRhz3iVL8td1CWcufImAOFwWxhg-1in7_7jH9BJGVpDvLA_v5uJB20ku5lQDBNNmkRIhT2CjaJXXMdaE4mmRPcaxsnvsJ8MXhvtbJFnSlY-5Zgki8QLTGkAfINyJNbNEbgey4TJ2Edlvk6yAQLlnQG-q_q2aUpmy24QAbimlqKczoIur9CLaGSQkUE0Now3ZHJBXGMFtYt48O_4DfCQ_9Y3A-xYP-3WfW4OPmbftCcLYTw6d_VCk2WADjYCVQ"/>
+</div>
+<div class="flex-grow p-4 md:p-8">
+<h3 class="font-headline text-3xl font-bold uppercase mb-4">Elite Conditioning</h3>
+<p class="text-slate-400 mb-6 leading-relaxed">Sports-specific strength and agility training designed to maximize output and minimize injury risk for professional competitors.</p>
+<div class="flex items-center gap-6">
+<span class="text-[10px] font-bold uppercase text-tertiary">Strength Lab</span>
+<span class="text-[10px] font-bold uppercase text-slate-500">Custom Nutrition</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Join the Clubhouse CTA -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="bg-surface-container-low rounded-xl p-12 md:p-24 border border-white/5 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="font-headline text-[20rem] font-bold text-white select-none absolute -right-20 -top-20 leading-none">JK</span>
+</div>
+<div class="max-w-2xl">
+<h2 class="font-headline text-5xl font-bold uppercase tracking-tight text-on-surface mb-6">Join The Clubhouse</h2>
+<p class="text-on-surface-variant text-xl mb-10">Get exclusive access to private drops, technical coaching insights, and invitation-only events for the Digital Clubhouse community.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-slate-950 border-none px-6 py-5 focus:ring-1 focus:ring-tertiary text-white rounded-md font-label uppercase text-sm tracking-widest" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="bg-tertiary text-on-tertiary px-10 py-5 font-bold uppercase tracking-widest text-sm rounded-md hover:brightness-110 transition-all" type="submit">Submit Application</button>
+</form>
+<p class="mt-6 text-outline text-xs">By joining, you agree to our Membership Terms and Privacy Policy.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full border-t border-white/5">
+<div class="md:col-span-1">
+<div class="text-xl font-bold text-blue-100 uppercase font-headline mb-6 tracking-tight">JKsportshub</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-8">Redefining performance standards through elite equipment and masterclass coaching since 2024.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-500 hover:text-white hover:border-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-500 hover:text-white hover:border-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-sm mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Academy</a></li>
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Cricket Gear</a></li>
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Football Hub</a></li>
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Fitness Elite</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-sm mb-8">Clubhouse</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">About Us</a></li>
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Press Kit</a></li>
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Contact</a></li>
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Affiliates</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-sm mb-8">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-blue-200 transition-colors text-sm font-['Manrope'] tracking-wide" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-xs font-['Manrope'] tracking-wide">© 2024 JKsportshub. The Digital Clubhouse.</p>
+<p class="text-slate-700 text-[10px] font-bold uppercase tracking-widest">Performance Engineered</p>
+</div>
+</footer>
+</body></html>
