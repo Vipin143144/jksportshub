@@ -1,7 +1,11 @@
 {
-  "name": "vipin",
-  "version": "0.1.0",
+  "name": "jk-sports-hub",
+  "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
