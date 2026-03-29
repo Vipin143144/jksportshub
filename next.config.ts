@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   images: {
@@ -9,6 +10,25 @@ const nextConfig: NextConfig = {
     ],
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 60,
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      const CopyWebpackPlugin = require("copy-webpack-plugin");
+      config.plugins.push(
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: path.join(__dirname, "node_modules/.prisma/client"),
+              to: path.join(__dirname, ".next/server"),
+              filter: (resourcePath: string) => {
+                return resourcePath.includes("rhel-openssl") || resourcePath.includes("libquery_engine");
+              },
+            },
+          ],
+        })
+      );
+    }
+    return config;
   },
   experimental: {
     serverComponentsExternalPackages: ["@prisma/client", "prisma"],
