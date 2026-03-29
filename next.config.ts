@@ -12,9 +12,9 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   experimental: {
+    serverComponentsExternalPackages: ["@prisma/client", "prisma"],
     optimizePackageImports: [
       "framer-motion",
-      "@prisma/client",
     ],
   },
   compiler: {
