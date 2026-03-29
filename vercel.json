@@ -3,8 +3,9 @@
   "buildCommand": "prisma generate && next build",
   "devCommand": "next dev",
   "installCommand": "npm install",
-  "includeFiles": [
-    "node_modules/.prisma/client/**",
-    "node_modules/@prisma/client/**"
-  ]
+  "functions": {
+    "app/page.tsx": {
+      "includeFiles": "node_modules/.prisma/client/**"
+    }
+  }
 }
