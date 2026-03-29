@@ -1,7 +1,10 @@
 import { getSitePage } from "@/lib/queries";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { siteConfig, waLink } from "@/lib/site";
+import Link from "next/link";
+
+export const dynamic = "force-dynamic";
 
 export const revalidate = 3600;
 

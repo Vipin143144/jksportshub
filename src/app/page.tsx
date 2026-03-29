@@ -7,7 +7,7 @@ import { StoreHeader } from "@/components/store/store-header";
 import { WhatsAppFab } from "@/components/store/whatsapp-fab";
 import { getRootCategories } from "@/lib/queries";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const categories = await getRootCategories();

@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig, waLink } from "@/lib/site";
 
+export const dynamic = "force-dynamic";
+
 export const revalidate = 3600;
 
 export const metadata: Metadata = {

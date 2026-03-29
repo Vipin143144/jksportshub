@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Search, Grid3X3, List } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
